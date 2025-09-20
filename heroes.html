@@ -30,15 +30,325 @@
             </nav>
         </header>
 
-        <div class="layout">
-            <article class="content">
-                <h2>Welcome to Dice Throne!</h2>
-                <p>This site covers heroes, gameplay, strategies, and expansions for Dice Throne.</p>
-            </article>
+        <div class="video">
+            <video autoplay muted loop>
+                <source src="pics/video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="heroes-layout">
+            <div class="info">
+                <article class="content">
+                    <h2>Heroes</h2>
+
+                    <p>
+                        Dice Throne heroes each have unique dice faces, signature abilities, and a distinct
+                        playstyle. This table lists the officially released heroes across the base
+                        sets, Marvel and X-Men licensed sets, recent Outcasts releases, and seasonal boxes.
+                        Click any hero name (on larger screens) to link to more detailed pages you can add later.
+                    </p>
+
+                    <br>
+
+                    <h3>How to read the table</h3>
+                    <ul>
+                        <li><span class="highlight">Role</span> - A short description of the hero's primary style (damage, control, tank, etc.).</li>
+                        <li><span class="highlight">Strengths</span> - What the hero excels at in a match.</li>
+                        <li><span class="highlight">Set</span> - Which release the hero belongs to (Season 1, Season 2, Marvel, X-Men, Outcasts, etc.).</li>
+                    </ul>
+
+                    <br>
+
+                    <h3>Tips for exploring heroes</h3>
+                    <ul>
+                        <li>Try beginner-friendly heroes first (Barbarian, Pyromancer, Gunslinger) to learn core mechanics.</li>
+                        <li>Use the hero gradients as a visual shorthand in your site — they help players scan for favorites quickly.</li>
+                        <li>If you plan to add hero detail pages, keep one consistent layout: portrait + short playstyle + signature combos.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Hero Table -->
+            <div class="info">
+                <article class="content">
+                    <h3>Hero Roster & Overview</h3>
+
+                    <table class="hero-table">
+                        <thead>
+                            <tr>
+                                <th>Hero</th>
+                                <th>Role</th>
+                                <th>Primary strengths</th>
+                                <th>Set</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Season 1 / Rerolled -->
+                            <tr>
+                                <td><span class="hero barbarian">Barbarian</span></td>
+                                <td>Damage Dealer</td>
+                                <td>High burst damage, straightforward play</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero moonelf">Moon Elf</span></td>
+                                <td>Agility / Range</td>
+                                <td>Evasion, ranged damage, status effects</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero pyromancer">Pyromancer</span></td>
+                                <td>Area / Damage</td>
+                                <td>Consistent fire damage & board pressure</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero shadowthief">Shadow Thief</span></td>
+                                <td>Combo / Control</td>
+                                <td>Poison, stealthy play, long-term setups</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero monk">Monk</span></td>
+                                <td>Defense / Control</td>
+                                <td>Chi management, healing and mitigation</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero paladin">Paladin</span></td>
+                                <td>Tank / Support</td>
+                                <td>Healing, protection, defensive utility</td>
+                                <td>Season 1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero ninja">Ninja</span></td>
+                                <td>Precision / Burst</td>
+                                <td>Fast attacks, mobility, sneaky combos</td>
+                                <td>Season 1 (Rerolled)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero treant">Treant</span></td>
+                                <td>Control / Board</td>
+                                <td>Summons and area control, durable</td>
+                                <td>Season 1 (Rerolled)</td>
+                            </tr>
+
+                            <!-- Season 2 -->
+                            <tr>
+                                <td><span class="hero samurai">Samurai</span></td>
+                                <td>Precision / Damage</td>
+                                <td>High single-target burst, disciplined play</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero gunslinger">Gunslinger</span></td>
+                                <td>Ranged DPS</td>
+                                <td>Reliable ranged damage & tempo control</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero tactician">Tactician</span></td>
+                                <td>Control / Tempo</td>
+                                <td>Manipulation of turns & economy</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero huntress">Huntress</span></td>
+                                <td>Precision / Status</td>
+                                <td>Debuffs, targeting, ranged tactics</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero artificer">Artificer</span></td>
+                                <td>Utility / Support</td>
+                                <td>Gadgetry & flexible toolkit</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero cursedpirate">Cursed Pirate</span></td>
+                                <td>Risk/Reward</td>
+                                <td>High variance, curse mechanics</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero seraph">Seraph</span></td>
+                                <td>Support / Healing</td>
+                                <td>Buffs, heals, team support</td>
+                                <td>Season 2</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero vampire">Vampire</span></td>
+                                <td>Sustain / Lifesteal</td>
+                                <td>Health gain via attacks, attrition</td>
+                                <td>Season 2</td>
+                            </tr>
+
+                            <!-- Marvel -->
+                            <tr>
+                                <td><span class="hero spiderman">Spider-Man</span></td>
+                                <td>Tricky / Mobility</td>
+                                <td>Movement, webbing-style control and combos</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero captainmarvel">Captain Marvel</span></td>
+                                <td>Power / Burst</td>
+                                <td>High damage output & resilience</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero blackpanther">Black Panther</span></td>
+                                <td>Agile / Precision</td>
+                                <td>Quick favorable trades and speed</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero thor">Thor</span></td>
+                                <td>Power / Control</td>
+                                <td>Thunder, big-impact abilities</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero scarlet">Scarlet Witch</span></td>
+                                <td>Chaos / Control</td>
+                                <td>Reality-bending effects and disruption</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero loki">Loki</span></td>
+                                <td>Trickster / Control</td>
+                                <td>Illusions, manipulations, unpredictable turns</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero doctorstrange">Doctor Strange</span></td>
+                                <td>Magic / Utility</td>
+                                <td>Spell effects, utility, board control</td>
+                                <td>Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero blackwidow">Black Widow</span></td>
+                                <td>Assassin / Control</td>
+                                <td>Status, precision strikes, high skill ceiling</td>
+                                <td>Marvel</td>
+                            </tr>
+
+                            <!-- X-Men -->
+                            <tr>
+                                <td><span class="hero wolverine">Wolverine</span></td>
+                                <td>Brawler / Damage</td>
+                                <td>Storm-level sustained damage, rage mechanics</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero storm">Storm</span></td>
+                                <td>Control / Elemental</td>
+                                <td>Area effects & environment control</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero iceman">Iceman</span></td>
+                                <td>Control / Freeze</td>
+                                <td>Slowing/freezing and board manipulation</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero psylocke">Psylocke</span></td>
+                                <td>Precision / Psychic</td>
+                                <td>High single-target precision & combos</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero jean">Jean Grey</span></td>
+                                <td>Power / Psychic</td>
+                                <td>High-risk high-reward psychic control</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero cyclops">Cyclops</span></td>
+                                <td>Ranged / Leadership</td>
+                                <td>Consistent ranged pressure & team synergy</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero gambit">Gambit</span></td>
+                                <td>Explosive / RNG</td>
+                                <td>High variance burst from charged cards</td>
+                                <td>X-Men</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero rogue">Rogue</span></td>
+                                <td>Absorb / Sustain</td>
+                                <td>Steal/absorb opponent power and survive</td>
+                                <td>X-Men</td>
+                            </tr>
+
+                            <!-- Outcasts (recent) -->
+                            <tr>
+                                <td><span class="hero necromancer">Necromancer</span></td>
+                                <td>Summon / Board</td>
+                                <td>Summons, sacrifice mechanics</td>
+                                <td>Outcasts</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero headless">Headless Horseman</span></td>
+                                <td>Ambush / Curse</td>
+                                <td>Tricky damage over time and curses</td>
+                                <td>Outcasts</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero pale">Pale Lady</span></td>
+                                <td>Debuff / Control</td>
+                                <td>Debuffs and board manipulation</td>
+                                <td>Outcasts</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero raveness">Raveness</span></td>
+                                <td>Trickster / Mobility</td>
+                                <td>Movement and tricky plays</td>
+                                <td>Outcasts</td>
+                            </tr>
+
+                            <!-- Seasonal / Special -->
+                            <tr>
+                                <td><span class="hero santa">Santa</span></td>
+                                <td>Seasonal / Fun</td>
+                                <td>Holiday-themed effects and reversal mechanics</td>
+                                <td>Santa vs Krampus</td>
+                            </tr>
+                            <tr>
+                                <td><span class="hero krampus">Krampus</span></td>
+                                <td>Seasonal / Punisher</td>
+                                <td>Punishing effects and aggressive utility</td>
+                                <td>Santa vs Krampus</td>
+                            </tr>
+
+                            <!-- Single/Promo -->
+                            <tr>
+                                <td><span class="hero deadpool">Deadpool</span></td>
+                                <td>Chaos / Wildcard</td>
+                                <td>Unpredictable, high-variant playstyle</td>
+                                <td>Standalone / Promo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
         </div>
 
         <footer>
-            &copy; 2025 - Blake Gould
+            <div>
+                <a href="index.html">Home</a> |
+                <a href="gameplay.html">Gameplay</a> |
+                <a href="heroes.html">Heroes</a> |
+                <a href="strategies.html">Strategies</a> |
+                <a href="expansions.html">Expansions</a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 - Blake Gould
+            </div>
         </footer>
     </body>
 </html>

@@ -115,18 +115,34 @@ h2>a{
 p{
   font-size: 22px;
   margin-top: 4%;
+  margin-bottom: 10%;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.5;
 }
 
 footer{
-  background-color: #233142;
+  background-color: #18222e;
   color: white;
   text-align: center;
+  padding: 1em 0 1em 0;
 }
 
 /* CLASSES */
+.video-figcap, .image-figcap{
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+  font-style: italic;
+}
+
+.image-figcap{
+  margin-bottom: 20%;
+}
+
+.copyright{
+  margin-top: 0.5em;
+}
 
 .logo>img{
   max-width: 200px;
@@ -154,6 +170,17 @@ footer{
   align-items: center;
   gap: 5%;
   flex-wrap: wrap;
+}
+
+.heroes-layout{
+  width: 75%;
+  margin: 10% auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
 }
 
 .content{
@@ -191,7 +218,52 @@ footer{
   object-fit: cover;
   object-position: center center;
 }
-/* CLASSES END */
+
+.intro-title{
+  text-decoration: none;
+}
+
+/* Section styles for gameplay guide */
+h3 {
+  font-size: 28px;
+  margin: 25px 0 15px;
+  text-align: center;
+  text-decoration: underline;
+  color: #f4b400;
+}
+
+ul, ol {
+  margin: 20px auto;
+  padding-left: 40px;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+ul>li, ol>li {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.note {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.85;
+  color: #ddd;
+}
+
+ol>li::marker {
+  color: #f4b400; 
+  font-weight: bold;
+}
+
+.highlight {
+  color: #f4b400;
+  font-weight: bold;
+}
 
 /* NAV ROLLOVER EFFECTS */
 a{
@@ -233,35 +305,110 @@ a.active{
 a.active::after{
   width: 100%;
 }
-/* END ROLLOVER EFFECTS*/
 
-/* TEXT HIGHLIGHT CLASSES */
-.hero{
-  color:transparent;
+/* Hero Page Layout Tweaks */
+.layout.hero-layout {
+  align-items: flex-start;
+}
+
+.info:first-child .content {
+  max-height: none;
+}
+
+/* Table Style */
+.hero-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0,0,0,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-table th,
+.hero-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+}
+
+.hero-table thead th {
+  background: #f4b400;
+  color: #233142;
+  font-weight: 700;
+  text-align: center;
+}
+
+.hero-table tbody tr:nth-child(even) {
+  background: rgba(230, 230, 230, 0.03);
+}
+
+/* HERO NAME GRADIENTS: base .hero class ensures gradient-text rendering */
+.hero {
+  display: inline-block;
+  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke-width: 0.15px;
-  -webkit-text-stroke-color: white;
-}
-.spiderman{
-  background-image: linear-gradient(#DF1F2D, #B11313, #2B3784, #447BBE);
-}
-
-.thor{
-  background-image: linear-gradient(#2c3034, #404b56, #faf0bf, #fadf7f, #cc0e1d, #a2141a);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(128, 128, 128);
 }
 
-.scarlet{
-  background-image: linear-gradient(#090506, #404445, #912614, #cb2d22, #fc98b0);
-}
+/* Season 1 palettes */
+.barbarian { background-image: linear-gradient(90deg,#cf2d00,#ff7a2d); }
+.moonelf   { background-image: linear-gradient(90deg,#7f4fb3,#5bd3c7); }
+.pyromancer{ background-image: linear-gradient(90deg,#ff6a00,#ffcc66); }
+.shadowthief { background-image: linear-gradient(90deg,#2a1739,#6b2f6b); }
+.monk { background-image: linear-gradient(90deg,#d6b56b,#f3e9c9); }
+.paladin { background-image: linear-gradient(90deg,#fff5d6,#ffd36b); }
+.ninja { background-image: linear-gradient(90deg,#2b2b2b,#7a7a7a); }
+.treant { background-image: linear-gradient(90deg,#2f6b2f,#9fd69f); }
 
-.loki{
-  background-image: linear-gradient(#d6d3ae, #50630d, #d6ae2f, #0b450a, #071a03);
-}
+/* Season 2 palettes */
+.samurai { background-image: linear-gradient(90deg,#b71c1c,#ffd6a5); }
+.gunslinger { background-image: linear-gradient(90deg,#bdbdbd,#7f7f7f); }
+.tactician { background-image: linear-gradient(90deg,#2e5a88,#8fc4ff); }
+.huntress { background-image: linear-gradient(90deg,#5a2f2f,#f28b9a); }
+.artificer { background-image: linear-gradient(90deg,#666666,#ffd27f); }
+.cursedpirate { background-image: linear-gradient(90deg,#3b2d2d,#7b4a4a); }
+.seraph { background-image: linear-gradient(90deg,#ffe9f0,#ffd6e8); }
+.vampire { background-image: linear-gradient(90deg,#2b001f,#8b0038); }
 
-.ultron{
-  background-image: linear-gradient(#262626, #4e4e4e, #c9c9c9, #f2f2f2, #941212);
-}
+/* Marvel/X-Men palettes */
+.spiderman{ background-image: linear-gradient(#DF1F2D, #B11313, #2B3784, #447BBE); }
+.captainmarvel { background-image: linear-gradient(90deg,#d7263d,#ffd166); }
+.blackpanther { background-image: linear-gradient(90deg,#0a0a0a,#6b5b95); }
+.thor{ background-image: linear-gradient(#2c3034, #404b56, #faf0bf, #fadf7f, #cc0e1d, #a2141a); }
+.scarlet{ background-image: linear-gradient(#090506, #404445, #912614, #cb2d22, #fc98b0); }
+.loki{ background-image: linear-gradient(#d6d3ae, #50630d, #d6ae2f, #0b450a, #071a03); }
+.doctorstrange { background-image: linear-gradient(90deg,#0b3d91,#9b59b6); }
+.blackwidow { background-image: linear-gradient(90deg,#1b1b1b,#c0392b); }
 
-.goblin{
-  background-image: linear-gradient(black, #a9c53d, #da187B, #a9c53d);
-}
+.wolverine { background-image: linear-gradient(90deg,#b16800,#ffd36b); }
+.storm { background-image: linear-gradient(90deg,#7fb3d5,#f6f6f6); }
+.iceman { background-image: linear-gradient(90deg,#bfe9ff,#6bc1ff); }
+.psylocke { background-image: linear-gradient(90deg,#6a1b9a,#ff6fcf); }
+.jean { background-image: linear-gradient(90deg,#7f1d1d,#ffb3b3); }
+.cyclops { background-image: linear-gradient(90deg,#1e3a8a,#62a3ff); }
+.gambit { background-image: linear-gradient(90deg,#7b3f00,#ffb86b); }
+.rogue { background-image: linear-gradient(90deg,#3a8b3a,#b6f0a3); }
+
+/* Outcasts / Seasonal / Promo */
+.necromancer { background-image: linear-gradient(90deg,#382b3b,#9b6aa5); }
+.headless { background-image: linear-gradient(90deg,#1a1a1a,#4b4b4b); }
+.pale { background-image: linear-gradient(90deg,#cbc7c7,#7d8b8d); }
+.raveness { background-image: linear-gradient(90deg,#332f3b,#7b6b9c); }
+
+.santa { background-image: linear-gradient(90deg,#ffffff,#ff6b6b); }
+.krampus { background-image: linear-gradient(90deg,#0b2f0b,#7b1b1b); }
+
+.deadpool { background-image: linear-gradient(90deg,#c21b1b,#4d4d4d); }
+
+.ultron{ background-image: linear-gradient(#262626, #4e4e4e, #c9c9c9, #f2f2f2, #941212); }
+.goblin{ background-image: linear-gradient(black, #a9c53d, #da187B, #a9c53d); }
+
+/* helper so hero name cells don't wrap awkwardly */
+.hero { white-space: nowrap; }
