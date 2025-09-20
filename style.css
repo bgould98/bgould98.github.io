@@ -100,16 +100,9 @@ body{
 }
 
 h2{
-  font-size: 38px;
+  font-size: 46px;
   text-align: center;
-  text-decoration: underline;
-}
-
-h2>a{
-  display: inline-block;
-  font-size: 38px;
-  text-align: center;
-  text-decoration: underline;
+  font-style: bold;
 }
 
 p{
@@ -126,6 +119,54 @@ footer{
   color: white;
   text-align: center;
   padding: 1em 0 1em 0;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 2% 0 2% 0;
+  text-align: center;
+  color: #f4b400;
+}
+
+ul{
+  list-style: disc;
+}
+
+ol{
+  list-style: decimal;
+}
+
+ul, ol {
+  margin: 20px auto;
+  padding-left: 40px;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+li {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.blockquote-left {
+  font-size: 20px;
+  font-style: italic;
+  color: #ffffff;
+  border-left: 4px solid #f4b400;
+  padding-left: 2%;
+  line-height: 1.5;
+}
+
+.blockquote-right{
+  font-size: 20px;
+  font-style: italic;
+  color: #ffffff;
+  border-right: 4px solid #f4b400;
+  line-height: 1.5;
+  padding-right: 2%;
+  text-align: right;
 }
 
 /* CLASSES */
@@ -221,29 +262,6 @@ footer{
 
 .intro-title{
   text-decoration: none;
-}
-
-/* Section styles for gameplay guide */
-h3 {
-  font-size: 28px;
-  margin: 25px 0 15px;
-  text-align: center;
-  text-decoration: underline;
-  color: #f4b400;
-}
-
-ul, ol {
-  margin: 20px auto;
-  padding-left: 40px;
-  max-width: 800px;
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-}
-
-ul>li, ol>li {
-  margin-bottom: 12px;
-  text-align: left;
 }
 
 .note {
