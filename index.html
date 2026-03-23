@@ -1,207 +1,215 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dice Throne | Home</title>
-        
-        <!-- STYLESHEET -->
-        <link rel="stylesheet" href="style.css?v=2">
-
-        <!-- FONT LINKS -->
+        <link rel="stylesheet" href="style.css?v=3">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     </head>
-    
-    <body class="sansation-regular">
-        <header>
-            <div class="logo">
-                <img src="pics/logo.png" alt="Dice Throne Logo">
+
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="index.html">
+                    <img src="pics/logo.png" alt="Dice Throne Logo">
+                    <div class="brand-copy">
+                        <span class="brand-kicker">Fan Guide</span>
+                        <span class="brand-title">Dice Throne Hub</span>
+                    </div>
+                </a>
+
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <a href="index.html" class="active" aria-current="page">Home</a>
+                    <a href="gameplay.html">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
             </div>
-            
-            <nav class="nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="gameplay.html">Gameplay</a>
-                <a href="heroes.html">Heroes</a>
-                <a href="strategies.html">Strategies</a>
-                <a href="expansions.html">Expansions</a>
-            </nav>
         </header>
 
-        <div class="video">
-            <video autoplay muted loop>
+        <section class="hero-banner">
+            <video autoplay muted loop playsinline aria-hidden="true">
                 <source src="pics/video.mp4" type="video/mp4">
             </video>
-        </div>
 
-        <div>
-            <!-- Welcome -->
-            <div class="layout">
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">Welcome to Dice Throne</h2>
-                        <p>Dice throne is a face-paced, tactical card and dice game of dueling heroes. Choose your hero, roll dice to activate unique abilities, and battle your way to victory. This site will guide you through the basics, strategies, and expansions of the game. 
-
-                            <a href="https://shop.dicethrone.com/collections/all?srsltid=AfmBOoprgyZY6WVi_MlrwcbVKvobJvwqivyo2EnkZNSXMZljKv1bUEO4" target="_blank"> --> Dice Throne Store <--</a>
-                        </p>
-
-                        <blockquote class="blockquote-left">
-                            "Often described to new players as "Yahtzee meets Magic: The Gathering", Dice Throne is a fast and strategic game of card play and dice manipulation for 2-6 Players." - <a href="https://shop.dicethrone.com/pages/about" target="_blank">Dice Throne About</a>
-                        </blockquote>
-                    </article>
-                </div>
-
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/js_cZrv6cZY?si=aafniHmlLL_Nq9fO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <figcaption class="video-figcap">
-                        Dice Throne Intro Video
-                    </figcaption>
-                </figure>
-            </div>
-
-            <!-- Gameplay -->
-            <div class="layout">
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AhMjkitJTgY?si=KhBdVP24x8ptuWZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <figcaption class="video-figcap">
-                        How to Play Dice Throne Video
-                    </figcaption>
-                </figure>
-
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">The Gameplay</h2>
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow">Tactical Dice Combat</span>
+                        <h1>Build your path to the throne.</h1>
                         <p>
-                            Dice Throne is played in turns, where each player rolls their hero's dice to generate resources and trigger abilities. Players use these abilities to attack, defend, or manipulate the game state. Matches involve managing health, status effects, combat points, and strategic choices to outplay opponents. The game's structure combines dice randomness with tactical decision-making, giving each hero a unique flow and playstyle. 
-
-                            <a href="gameplay.html">--> To Gameplay <--</a>
+                            A polished fan guide for learning Dice Throne, comparing heroes, and exploring the expansions that turn every duel into a different story.
                         </p>
 
-                        <blockquote class="blockquote-right">
-                            "Dice Throne can be played as a 1vs1 dueling game, in teams, and yes even cooperatively. Dice Throne now features 16 heroes to choose from, each featuring wildly different aesthetics and play styles." - <a href="https://shop.dicethrone.com/pages/about" target="_blank">Dice Throne About</a>
-                        </blockquote>
-                    </article>
+                        <div class="button-row">
+                            <a class="button" href="heroes.html">Explore Heroes</a>
+                            <a class="button-secondary" href="gameplay.html">Learn the Basics</a>
+                        </div>
+                    </div>
+
+                    <aside class="hero-panel">
+                        <h2>Why Dice Throne works</h2>
+                        <ul>
+                            <li>Fast turns with meaningful decisions on every reroll.</li>
+                            <li>Distinct heroes that reward different styles of play.</li>
+                            <li>Flexible formats from 1v1 duels to cooperative missions.</li>
+                            <li>Enough randomness to stay dramatic without losing strategy.</li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
+        </section>
 
-            <!-- Heroes -->
-            <div class="layout">
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">What Are Heroes?</h2>
+        <main class="site-main">
+            <div class="site-shell">
+                <section class="stat-grid">
+                    <article class="stat-card">
+                        <span class="stat-value">5</span>
+                        <p>core pages now organized around learning, roster browsing, and expansion discovery.</p>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-value">3</span>
+                        <p>main ways to play: duels, teams, and co-op modes that change the feel of each session.</p>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-value">1</span>
+                        <p>goal for this site: help new and returning players find the right entry point fast.</p>
+                    </article>
+                </section>
+
+                <section class="home-section">
+                    <article class="panel">
+                        <span class="eyebrow">Start Here</span>
+                        <h2>Welcome to Dice Throne</h2>
                         <p>
-                            Heroes are the heart of Dice Throne. Each hero comes with their own unique dice, abilities, and playstyle, making every match feel different. Some heroes focus on powerful attacks, while others rely on defense, healing, or special mechanics. Learning your hero's strengths & mastering their abilities is the key to victory. 
-
-                            <a href="heroes.html">--> To Heroes <--</a>
+                            Dice Throne is a fast-paced card and dice battler built around hero identity. Each character has their own dice faces, offensive abilities, defensive rolls, and upgrade path, which makes matchups feel personal instead of generic.
                         </p>
-
-                        <blockquote class="blockquote-left">
-                            "I personally recommend practicing Monk and including him as the reliable part of your lineup. He performs well in nearly any situation by giving you (the player) flexibility to play him aggressively or defensively depending on the matchup." - <a href="https://www.reddit.com/r/DiceThrone/comments/1hp9kv0/comment/m4gbqv0/" target="_blank">Ran3773 | Reddit</a>
-                        </blockquote>
-                    </article>
-                </div>
-
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/05hhNzoaqn4?si=RApddD3cEWfcDgZx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <figcaption class="video-figcap">
-                        The Outcasts Reveal Trailer
-                    </figcaption>
-                </figure>
-            </div>
-
-            <!-- Strategies -->
-            <div class="layout">
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MymRd-fSfaY?si=VUpW7Vg6uicF1Pb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <figcaption class="video-figcap">
-                        Top 5 Tips & Tricks For Dice Throne
-                    </figcaption>
-                </figure>
-
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">What Are Some Strategies?</h2>
                         <p>
-                            Mastering Dice Throne requires more than rolling dice; it's about planning and adapting each turn. Players must balance offense and defense, anticipate their opponents moves, and manage resources efficiently. Understanding each hero's strengths, optimal ability combos, and situational tactics gives you the edge in every match. Strategic positioning, timing your abilities, and exploiting opponent weaknesses are key to consistently winning battles. 
-                            <a href="strategies.html">--> To Strategies <--</a>
+                            This site is designed to help new players understand the flow of the game while giving fans a cleaner place to compare heroes, learn strategy basics, and jump into the bigger universe.
                         </p>
-
-                        <blockquote class="blockquote-right">
-                            "Just roll the ultimate ability every time!" - <a href="https://www.reddit.com/r/DiceThrone/comments/1apzhjc/comment/kq9p3tc/" target="_blank">The_Roadkill | Reddit</a>
-                        </blockquote>
+                        <div class="button-row">
+                            <a class="button-secondary" href="https://shop.dicethrone.com/collections/all?srsltid=AfmBOoprgyZY6WVi_MlrwcbVKvobJvwqivyo2EnkZNSXMZljKv1bUEO4" target="_blank" rel="noreferrer">Visit the Official Store</a>
+                        </div>
                     </article>
-                </div>
-            </div>
 
-            <!-- DTA -->
-            <div class="layout">
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">Dice Throne Adventures - Expansion</h2>
+                    <figure class="media-card">
+                        <h3>Intro Video</h3>
+                        <iframe src="https://www.youtube.com/embed/js_cZrv6cZY?si=aafniHmlLL_Nq9fO" title="Dice Throne intro video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>An official-style first look if you want the fast summary before reading deeper.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section-grid">
+                    <article class="panel">
+                        <span class="eyebrow">Gameplay</span>
+                        <h2>Learn the flow of a turn</h2>
                         <p>
-                            Dice Throne Adventures transforms the competitive Dice Throne experience into a cooperative dungeon crawl. Players embark on a campaign where they explore modular maps, battle minions, and face off against challenging bosses. This expansion introduces two main modes: the Portal Crawl, a tile-laying adventure with evolving scenarios, and the Boss Battle, a cooperative showdown against formidable opponents. It enhances replayability with legacy elements, evolving challenges, and the opportunity to use heroes from Seasons 1 and 2 in a new context. 
-                            <a href="expansions.html">--> To Expansions <--</a>
+                            Dice Throne turns are easy to follow once you understand the rhythm: upkeep, income, main phase, offensive rolls, defense, and cleanup. The trick is learning when to push for damage and when to spend combat points for setup.
                         </p>
-
-                        <blockquote class="blockquote-left">
-                            "Exploration, gold, treasure, upgrades, minions, boss battles, and even a shopkeeper named Rosella? Welcome to the latest addition to the Dice Throne universe!" - <a href="https://shop.dicethrone.com/products/dice-throne-adventures?srsltid=AfmBOopGZHWd506AgH0MnsbJrRLgdJZOD_DYxOE-7bEi325ekra3m5uC" target="_blank">Dice Throne Adventures | Features</a>
-                        </blockquote>
+                        <div class="button-row">
+                            <a class="button" href="gameplay.html">View Gameplay Guide</a>
+                        </div>
                     </article>
-                </div>
 
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/g-GklydB5o4?si=FskH7yEHTo7LgoLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <article class="quote-card">
+                        <h3>About the game</h3>
+                        <blockquote>
+                            Often described as Yahtzee meets a card battler, Dice Throne blends big moments, hero identity, and dice manipulation into a format that stays approachable.
+                        </blockquote>
+                        <cite>
+                            Inspired by the official
+                            <a class="quote-link" href="https://shop.dicethrone.com/pages/about" target="_blank" rel="noreferrer">Dice Throne About page</a>
+                        </cite>
+                    </article>
+                </section>
 
-                    <figcaption class="video-figcap">
-                        Dice Throne Adventures Intro Video
-                    </figcaption>
-                </figure>
-            </div>
-
-            <!-- Missions -->
-            <div class="layout">
-                <figure class="info-video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/y98MbfETAj8?si=laKVulZhpCYijbuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <figcaption class="video-figcap">
-                        Marvel Dice Throne Missions Intro Video
-                    </figcaption>
-                </figure>
-
-                <div class="info">
-                    <article class="content">
-                        <h2 class="intro-title">Marvel Dice Throne Missions - Expansion</h2>
+                <section class="section-grid">
+                    <article class="panel">
+                        <span class="eyebrow">Heroes</span>
+                        <h2>Every hero changes the puzzle</h2>
                         <p>
-                            Marvel Dice Throne Missions brings the Marvel universe into the Dice Throne arena. Players can team up with iconic heroes like <span class="spiderman hero">Spider-Man</span>, <span class="thor hero">Thor</span>, <span class="loki hero">Loki</span>, and <span class="scarlet hero">Scarlet Witch</span> to tackle solo or cooperative missions against infamous villains such as <span class="ultron hero">Ultron</span> & <span class="goblin hero">Green Goblin</span>. The expansion offers a variety of missions, each with unique scenarios and boss battles, providing a rich narrative experience. It also includes a one-shot mode for quick play sessions, allowing fans to immerse themselves in the Marvel universe with the familiar Dice Throne mechanics. 
-
-                            <a href="expansions.html">--> To Expansions <--</a>
+                            Some heroes are straightforward damage dealers. Others are timing-heavy control characters, sustain specialists, or tricky combo engines. Learning which style fits you is one of the best parts of the game.
                         </p>
-
-                        <blockquote class="blockquote-right">
-                            "Marvel Dice Throne Missions is an electrifying new cooperative expansion, which allows 1-4 Dice Throne heroes to team up against a host of iconic Villains from the Marvel universe." - <a href="https://shop.dicethrone.com/products/marvel-dice-throne-missions-1?srsltid=AfmBOoqssaWtLP2egpjRc2yyenqtviGknlZseWC3gSBg-trVLF0Hhvgv" target="_blank">Marvel Dice Throne Missions | Features</a>
-                        </blockquote>
+                        <p>
+                            The roster page collects the heroes into one cleaner reference so you can browse styles, strengths, and release sets without digging through product pages.
+                        </p>
+                        <div class="button-row">
+                            <a class="button" href="heroes.html">Browse the Roster</a>
+                        </div>
                     </article>
-                </div>
-            </div>
-        </div>
-            
-        <footer>
-            <div>
-                <a href="index.html">Home</a> |
-                <a href="gameplay.html">Gameplay</a> |
-                <a href="heroes.html">Heroes</a> |
-                <a href="strategies.html">Strategies</a> |
-                <a href="expansions.html">Expansions</a>
-            </div>
 
-            <div class="copyright">
-                &copy; 2025 - Blake Gould
+                    <figure class="media-card">
+                        <h3>Hero Spotlight</h3>
+                        <iframe src="https://www.youtube.com/embed/05hhNzoaqn4?si=RApddD3cEWfcDgZx" title="Dice Throne Outcasts trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>Trailers like this are great for getting a feel for the tone and style of new releases.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section-grid">
+                    <article class="panel">
+                        <span class="eyebrow">Strategy</span>
+                        <h2>Small decisions add up fast</h2>
+                        <p>
+                            Good Dice Throne play is about more than landing a flashy ability. You are managing rerolls, hand resources, combat points, and the tempo of the matchup every turn.
+                        </p>
+                        <div class="button-row">
+                            <a class="button" href="strategies.html">Read Strategy Notes</a>
+                        </div>
+                    </article>
+
+                    <article class="quote-card">
+                        <h3>Classic fan advice</h3>
+                        <blockquote>
+                            Practice a flexible hero first so you can learn when to switch between aggressive and defensive play instead of only chasing the biggest attack.
+                        </blockquote>
+                        <cite>
+                            Based on community advice from
+                            <a class="quote-link" href="https://www.reddit.com/r/DiceThrone/comments/1hp9kv0/comment/m4gbqv0/" target="_blank" rel="noreferrer">Ran3773 on Reddit</a>
+                        </cite>
+                    </article>
+                </section>
+
+                <section class="section-grid">
+                    <article class="expansion-card">
+                        <span class="eyebrow">Co-op Expansion</span>
+                        <h3>Dice Throne Adventures</h3>
+                        <p>
+                            Adventures turns the duel system into a cooperative dungeon crawl with portal maps, minions, bosses, loot, and longer-form progression. It is the best bridge from competitive play into campaign-style sessions.
+                        </p>
+                        <div class="button-row">
+                            <a class="button-secondary" href="expansions.html">See Expansions</a>
+                        </div>
+                    </article>
+
+                    <article class="expansion-card">
+                        <span class="eyebrow">Marvel Co-op</span>
+                        <h3>Missions</h3>
+                        <p>
+                            Marvel Dice Throne Missions adds scenario-driven villain encounters for solo and cooperative play, letting heroes like <span class="spiderman hero">Spider-Man</span>, <span class="thor hero">Thor</span>, <span class="loki hero">Loki</span>, and <span class="scarlet hero">Scarlet Witch</span> team up against enemies like <span class="ultron hero">Ultron</span> and <span class="goblin hero">Green Goblin</span>.
+                        </p>
+                        <div class="button-row">
+                            <a class="button-secondary" href="expansions.html">Compare Modes</a>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="gameplay.html">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
+
+                <div class="copyright">&copy; 2026 Blake Gould</div>
             </div>
         </footer>
     </body>

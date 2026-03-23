@@ -1,79 +1,124 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dice Throne | Strategies</title>
-        
-        <!-- STYLESHEET -->
-        <link rel="stylesheet" href="style.css?v=2">
-
-        <!-- FONT LINKS -->
+        <link rel="stylesheet" href="style.css?v=3">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     </head>
-    
-    <body class="sansation-regular">
-        <header>
-            <div class="logo">
-                <img src="pics/logo.png" alt="Dice Throne Logo">
-            </div>
 
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="gameplay.html">Gameplay</a>
-                <a href="heroes.html">Heroes</a>
-                <a href="strategies.html" class="active">Strategies</a>
-                <a href="expansions.html">Expansions</a>
-            </nav>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="index.html">
+                    <img src="pics/logo.png" alt="Dice Throne Logo">
+                    <div class="brand-copy">
+                        <span class="brand-kicker">Fan Guide</span>
+                        <span class="brand-title">Dice Throne Hub</span>
+                    </div>
+                </a>
+
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <a href="index.html">Home</a>
+                    <a href="gameplay.html">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html" class="active" aria-current="page">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
+            </div>
         </header>
 
-        <div class="video">
-            <video autoplay muted loop>
-                <source src="pics/video.mp4" type="video/mp4">
-            </video>
-        </div>
+        <main class="site-main page-main">
+            <div class="site-shell">
+                <section class="page-hero">
+                    <span class="eyebrow">Play Smarter</span>
+                    <h1>Win more turns before you win the game.</h1>
+                    <p>
+                        Strong Dice Throne strategy is built from repeatable decisions: choosing the right offensive line, protecting your resources, and understanding when the matchup calls for patience instead of pressure.
+                    </p>
+                </section>
 
-        <div class="layout">
-            <!-- Left side -->
-            <div class="info">
-                <article class="content">
-                    <h2>Strategies</h2>
-                    <p>Dice Throne PvP is all about reading your opponent, managing dice rolls & CP, and using your abilities efficiently. Focus on maximizing your damage output while defending against key enemy abilities. Timing your powers and combos can turn the tide of the match. Consider your resources carefully each turn, including CP, cards, and dice.</p>
-                    <p>Learning how to chain abilities is critical. Some heroes excel in consistent damage while others rely on burst combos. Know the hero you're playing against, and anticipate their key moves. Positioning in dice-based mechanics is also important, even in a simple PVP setup, since rerolls and attack modifiers can swing a fight dramatically.</p>
-                    <p>Patience and flexibility are key. Don't always play your most powerful ability immediately; sometimes it's better to conserve CP for a critical turn. Adapt your strategy based on dice rolls, opponent behavior, and remaining health. Use status effects and control mechanics strategically to limit your opponent's options.</p>
-                </article>
+                <section class="section-grid">
+                    <article class="panel">
+                        <h2>Core strategic mindset</h2>
+                        <p>
+                            Dice Throne PvP is about reading your opponent, managing rerolls and CP, and getting maximum value from your hero's strongest lines without overcommitting. Not every good turn ends with your biggest attack.
+                        </p>
+                        <p>
+                            Great players understand which ability they are trying to represent, what backup line they can settle for, and how much CP they can afford to spend to protect the plan. That flexibility matters just as much as raw luck.
+                        </p>
+                    </article>
+
+                    <article class="quote-card">
+                        <h3>Useful reminder</h3>
+                        <blockquote>
+                            A flashy offensive roll is only part of the turn. The game is often decided by how well you planned the attack and how much value you saved for the next cycle.
+                        </blockquote>
+                        <cite>Think ahead one turn and a lot of tactical decisions become clearer.</cite>
+                    </article>
+                </section>
+
+                <section class="tips-grid">
+                    <article class="tip-card">
+                        <strong>Track CP constantly</strong>
+                        <p>If you know how much combat point pressure both players have, you can better predict upgrades, reaction cards, and whether your opponent is really threatening a swing turn.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Play for realistic lines</strong>
+                        <p>Do not tunnel on the dream roll if the safer line still creates pressure. Reliable damage plus a strong hand is often better than chasing the absolute ceiling.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Respect hero identity</strong>
+                        <p>Some heroes want short explosive games, while others want to drag the fight out. Your strategy should change depending on which side of that matchup you are on.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Watch reroll patterns</strong>
+                        <p>Experienced players often reveal what they are aiming for with the dice they keep. That can tell you whether to prepare for burst, utility, or a fallback attack.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Use status effects early</strong>
+                        <p>Control effects are stronger when they force awkward decisions before your opponent reaches their best upgrade or combo sequence.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Defense can be tempo</strong>
+                        <p>Sometimes the best aggressive play is staying alive efficiently, protecting resources, and making the next turn more favorable instead of forcing value immediately.</p>
+                    </article>
+                </section>
+
+                <section class="section-grid">
+                    <article class="panel">
+                        <h2>Simple match checklist</h2>
+                        <ul class="compact-list">
+                            <li>What is my best roll this turn, and what is my safe fallback?</li>
+                            <li>Can I afford to spend CP now, or do I need to hold it for defense and reactions?</li>
+                            <li>Does this matchup reward aggression, attrition, or disruption?</li>
+                            <li>What is my opponent most likely representing with their current board and resources?</li>
+                        </ul>
+                    </article>
+
+                    <article class="media-card">
+                        <h3>Tips and tricks video</h3>
+                        <iframe src="https://www.youtube.com/embed/MymRd-fSfaY?si=VUpW7Vg6uicF1Pb4" title="Top 5 tips and tricks for Dice Throne" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>A quick strategy video is a nice companion to the matchup and resource advice on this page.</figcaption>
+                    </article>
+                </section>
             </div>
+        </main>
 
-            <!-- Right side-->
-            <div class="info">
-                <article class="content">
-                    <h3>Tips & Quick Notes</h3>
-                    <ul>
-                        <li>Keep track of your opponent's CP & Health.</li>
-                        <li>Use rerolls wisely, especially for combos.</li>
-                        <li>Some heroes shine in long games, others are strong early.</li>
-                        <li>Observe patterns in your opponent's playstyle.</li>
-                        <li>Always check your available CP before planning your main phase.</li>
-                        <li>Control the tempo - sometimes defense is better than aggressive play.</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="gameplay.html">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
 
-        <footer>
-            <div>
-                <a href="index.html">Home</a> |
-                <a href="gameplay.html">Gameplay</a> |
-                <a href="heroes.html">Heroes</a> |
-                <a href="strategies.html">Strategies</a> |
-                <a href="expansions.html">Expansions</a>
-            </div>
-
-            <div class="copyright">
-                &copy; 2025 - Blake Gould
+                <div class="copyright">&copy; 2026 Blake Gould</div>
             </div>
         </footer>
     </body>

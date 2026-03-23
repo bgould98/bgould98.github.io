@@ -1,97 +1,119 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dice Throne | Gameplay</title>
-        
-        <!-- STYLESHEET -->
-        <link rel="stylesheet" href="style.css?v=2">
-
-        <!-- FONT LINKS -->
+        <link rel="stylesheet" href="style.css?v=3">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     </head>
-    
-    <body class="sansation-regular">
-        <header>
-            <div class="logo">
-                <img src="pics/logo.png" alt="Dice Throne Logo">
-            </div>
 
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="gameplay.html" class="active">Gameplay</a>
-                <a href="heroes.html">Heroes</a>
-                <a href="strategies.html">Strategies</a>
-                <a href="expansions.html">Expansions</a>
-            </nav>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="index.html">
+                    <img src="pics/logo.png" alt="Dice Throne Logo">
+                    <div class="brand-copy">
+                        <span class="brand-kicker">Fan Guide</span>
+                        <span class="brand-title">Dice Throne Hub</span>
+                    </div>
+                </a>
+
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <a href="index.html">Home</a>
+                    <a href="gameplay.html" class="active" aria-current="page">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
+            </div>
         </header>
 
-        <div class="video">
-            <video autoplay muted loop>
-                <source src="pics/video.mp4" type="video/mp4">
-            </video>
-        </div>
+        <main class="site-main page-main">
+            <div class="site-shell">
+                <section class="page-hero">
+                    <span class="eyebrow">Learn the System</span>
+                    <h1>Understand the turn before chasing big combos.</h1>
+                    <p>
+                        Dice Throne feels much easier once the turn order clicks. This page turns the rules into a cleaner sequence so a new player can understand setup, pacing, and where important decisions actually happen.
+                    </p>
+                </section>
 
-        <div class="layout">
-            <div class="info">
-                <article class="content">
-                    <h2 class="intro-title">Getting Started & Turn Order</h2>
-
-                    <div>
-                        <h3>Quick setup</h3>
-
-                        <ul>
-                            <li>Choose a hero and set up their hero board, tokens, and dice.</li>
-                            <li>Set starting <span class="highlight">Health</span> and <span class="highlight">CP</span> as shown on your hero leaflet.</li>
-                            <li>Draw your starting hand, shuffle your deck, and roll to determine the Start Player.</li>
+                <section class="section-grid">
+                    <article class="panel">
+                        <h2>Quick setup</h2>
+                        <ul class="info-list">
+                            <li>Choose a hero and place their board, tokens, dice, and deck within reach.</li>
+                            <li>Set starting <span class="highlight">Health</span> and <span class="highlight">Combat Points</span> using the hero leaflet.</li>
+                            <li>Draw the starting hand, shuffle the deck, and roll to determine the first player.</li>
+                            <li>Keep your status effects visible from the start so each turn is easier to track.</li>
                         </ul>
+                        <div class="button-row">
+                            <a class="button-secondary" href="https://dice-throne.rulepop.com/" target="_blank" rel="noreferrer">Open the Rulepop Guide</a>
+                        </div>
+                    </article>
 
-                        <p class="note">(See official Rulepop guide here): <a href="https://dice-throne.rulepop.com/" target="_blank">RULEPOP</a></p>
-                    </div>
+                    <article class="media-card">
+                        <h3>Watch a rules overview</h3>
+                        <iframe src="https://www.youtube.com/embed/AhMjkitJTgY?si=KhBdVP24x8ptuWZk" title="How to play Dice Throne" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>A visual walkthrough helps the phase order make sense much faster than reading rules alone.</figcaption>
+                    </article>
+                </section>
 
-                    <div>
-                        <h3>Complete turn order</h3>
-
-                        <ol>
-                            <li><span class="highlight">Upkeep Phase</span> - Resolve start-of-turn status effects and passive abilities.</li>
-                            <li><span class="highlight">Income Phase</span> - Gain 1 CP and draw 1 card.</li>
-                            <li><span class="highlight">Main Phase (1)</span> - Play hero upgrades, action cards, or sell cards for CP.</li>
-                            <li><span class="highlight">Offensive Roll Phase</span> - Perform up to 3 roll attempts, then activate an offensive ability.</li>
-                            <li><span class="highlight">Targeting & Resolve</span> - Determine the attack target and resolve the attack.</li>
-                            <li><span class="highlight">Defensive Roll Phase</span> - Defender(s) roll to activate their Defensive Ability (if the attack is defendable).</li>
-                            <li><span class="highlight">Main Phase (2)</span> - Same as Main Phase (1); a final chance to play cards or upgrades.</li>
-                            <li><span class="highlight">Discard Phase</span> - Sell cards until you meet the hand limit (selling gives CP).</li>
+                <section class="section-grid">
+                    <article class="panel">
+                        <h2>Complete turn order</h2>
+                        <ol class="timeline">
+                            <li><span class="label">Upkeep Phase:</span> resolve start-of-turn status effects, lingering triggers, and passive hero abilities.</li>
+                            <li><span class="label">Income Phase:</span> gain 1 CP and draw 1 card so you can plan the turn with fresh resources.</li>
+                            <li><span class="label">Main Phase One:</span> play upgrades, action cards, or sell cards for more CP before rolling.</li>
+                            <li><span class="label">Offensive Roll Phase:</span> roll up to three times and lock in the offensive ability you want to activate.</li>
+                            <li><span class="label">Targeting and Resolve:</span> declare the target, apply modifiers, and resolve the attack sequence.</li>
+                            <li><span class="label">Defensive Roll Phase:</span> the defender rolls if the attack is defendable and applies shields, prevention, or return effects.</li>
+                            <li><span class="label">Main Phase Two:</span> use a final window to play cards, upgrades, or cleanup actions after combat resolves.</li>
+                            <li><span class="label">Discard Phase:</span> sell down to hand limit if needed and carry remaining setup into the next round.</li>
                         </ol>
-                    </div>
+                    </article>
 
-                    <div>
-                        <h3>Tips for new players</h3>
-                        <ul>
-                            <li>Focus on learning one hero's dice and abilities first.</li>
-                            <li>Manage your <span class="highlight">CP</span>. Upgrades and cards can swing the game.</li>
-                            <li>Play cards before and after rolls in the two <span class="highlight">Main Phases</span>.</li>
-                            <li>When you're done rolling, say “Ready to attack!” so everyone's clear.</li>
-                        </ul>
-                    </div>
-                </article>
+                    <article class="quote-card">
+                        <h3>New-player shortcut</h3>
+                        <blockquote>
+                            If you remember only one thing, remember this: the turn is not just about rolling well. Good turns are built in the main phases before and after the attack.
+                        </blockquote>
+                        <cite>That mindset makes the rest of the rules much easier to learn.</cite>
+                    </article>
+                </section>
+
+                <section class="tips-grid">
+                    <article class="tip-card">
+                        <strong>Learn one hero first</strong>
+                        <p>Repeated reps with a single hero teach timing, reroll priorities, and how to spend CP more effectively than constantly switching characters.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Think in phases</strong>
+                        <p>Most mistakes happen when players forget card windows. Main Phase One and Main Phase Two are where a lot of subtle value lives.</p>
+                    </article>
+                    <article class="tip-card">
+                        <strong>Announce the attack</strong>
+                        <p>Saying “ready to attack” after your final roll keeps the table aligned and makes defensive interactions much smoother.</p>
+                    </article>
+                </section>
             </div>
-        </div>
+        </main>
 
-        <footer>
-            <div>
-                <a href="index.html">Home</a> |
-                <a href="gameplay.html">Gameplay</a> |
-                <a href="heroes.html">Heroes</a> |
-                <a href="strategies.html">Strategies</a> |
-                <a href="expansions.html">Expansions</a>
-            </div>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="gameplay.html">Gameplay</a>
+                    <a href="heroes.html">Heroes</a>
+                    <a href="strategies.html">Strategies</a>
+                    <a href="expansions.html">Expansions</a>
+                </nav>
 
-            <div class="copyright">
-                &copy; 2025 - Blake Gould
+                <div class="copyright">&copy; 2026 Blake Gould</div>
             </div>
         </footer>
     </body>
