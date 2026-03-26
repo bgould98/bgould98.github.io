@@ -3,214 +3,140 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dice Throne | Home</title>
-        <link rel="stylesheet" href="style.css?v=3">
+        <title>Blake Gould | Portfolio</title>
+        <meta name="description" content="Portfolio homepage for Blake Gould featuring web projects and coursework.">
+        <link rel="stylesheet" href="portfolio.css?v=2">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
-
     <body>
+        <div class="page-bg" aria-hidden="true">
+            <div class="bg-layer bg-layer-one"></div>
+            <div class="bg-layer bg-layer-two"></div>
+            <div class="bg-grid"></div>
+        </div>
+
         <header class="site-header">
-            <div class="header-inner">
+            <div class="shell header-inner">
                 <a class="brand" href="index.html">
-                    <img src="pics/logo.png" alt="Dice Throne Logo">
-                    <div class="brand-copy">
-                        <span class="brand-kicker">Fan Guide</span>
-                        <span class="brand-title">Dice Throne Hub</span>
-                    </div>
+                    <span class="brand-name">Blake Gould</span>
+                    <span class="brand-role">Web Portfolio</span>
                 </a>
 
                 <nav class="site-nav" aria-label="Primary navigation">
-                    <a href="index.html" class="active" aria-current="page">Home</a>
-                    <a href="gameplay.html">Gameplay</a>
-                    <a href="heroes.html">Heroes</a>
-                    <a href="strategies.html">Strategies</a>
-                    <a href="expansions.html">Expansions</a>
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
                 </nav>
             </div>
         </header>
 
-        <section class="hero-banner">
-            <video autoplay muted loop playsinline aria-hidden="true">
-                <source src="pics/video.mp4" type="video/mp4">
-            </video>
-
-            <div class="hero-content">
-                <div class="hero-grid">
-                    <div class="hero-copy">
-                        <span class="eyebrow">Tactical Dice Combat</span>
-                        <h1>Build your path to the throne.</h1>
-                        <p>
-                            A polished fan guide for learning Dice Throne, comparing heroes, and exploring the expansions that turn every duel into a different story.
+        <main>
+            <section class="hero-section section" id="home">
+                <div class="shell hero-layout">
+                    <div class="hero-copy reveal">
+                        <p class="section-label">Portfolio</p>
+                        <h1>Projects, coursework, and future work.</h1>
+                        <p class="hero-summary">
+                            Hello! My name is Blake Gould, and I am currently studying computer science at Mankato State University. This website acts as my personal portfolio for anything computer science related.
                         </p>
 
-                        <div class="button-row">
-                            <a class="button" href="heroes.html">Explore Heroes</a>
-                            <a class="button-secondary" href="gameplay.html">Learn the Basics</a>
+                        <div class="action-row">
+                            <a class="button button-primary" href="#projects">View Projects</a>
                         </div>
                     </div>
 
-                    <aside class="hero-panel">
-                        <h2>Why Dice Throne works</h2>
-                        <ul>
-                            <li>Fast turns with meaningful decisions on every reroll.</li>
-                            <li>Distinct heroes that reward different styles of play.</li>
-                            <li>Flexible formats from 1v1 duels to cooperative missions.</li>
-                            <li>Enough randomness to stay dramatic without losing strategy.</li>
-                        </ul>
+                    <aside class="hero-card reveal">
+                        <p class="section-label">Current Focus</p>
+                        <h2>Featured project</h2>
+                        <div class="hero-card-block">
+                            <span class="small-label">Project</span>
+                            <strong>Dice Throne Fan Page</strong>
+                            <p>A fan-made webpage for <i>Dice Throne</i>. Features guides, gameplay strategies, and detailed information to help players better understand mechanics and improve their play.</p>
+                            <a class="button button-primary" href="projects/dice-throne/index.html">Open Dice Throne</a>
+                        </div>
                     </aside>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <main class="site-main">
-            <div class="site-shell">
-                <section class="stat-grid">
-                    <article class="stat-card">
-                        <span class="stat-value">5</span>
-                        <p>core pages now organized around learning, roster browsing, and expansion discovery.</p>
-                    </article>
-                    <article class="stat-card">
-                        <span class="stat-value">3</span>
-                        <p>main ways to play: duels, teams, and co-op modes that change the feel of each session.</p>
-                    </article>
-                    <article class="stat-card">
-                        <span class="stat-value">1</span>
-                        <p>goal for this site: help new and returning players find the right entry point fast.</p>
-                    </article>
-                </section>
+            <section class="section" id="projects">
+                <div class="shell">
+                    <div class="section-intro reveal">
+                        <p class="section-label">Projects</p>
+                        <h2>Featured work</h2>
+                    </div>
 
-                <section class="home-section">
-                    <article class="panel">
-                        <span class="eyebrow">Start Here</span>
-                        <h2>Welcome to Dice Throne</h2>
+                    <div class="project-list">
+                        <article class="project-card reveal">
+                            <div class="project-visual">
+                                <img src="projects/dice-throne/pics/logo.png" alt="Dice Throne logo">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span>Fan Site Redesign</span>
+                                    <span>HTML / CSS</span>
+                                </div>
+                                <h3>Dice Throne Hub</h3>
+                                <p>
+                                    A classroom project evolved into a more polished fan website with improved layout, page hierarchy, responsive styling, and a dedicated project path under the portfolio.
+                                </p>
+                                <ul class="project-points">
+                                    <li>Multi-page static site with themed design and shared styling.</li>
+                                    <li>Includes dedicated pages for gameplay, heroes, strategies, and expansions.</li>
+                                    <li>Uses embedded media, structured content sections, and custom visual styling to present the game clearly.</li>
+                                </ul>
+                                <div class="action-row">
+                                    <a class="button button-primary" href="projects/dice-throne/index.html">View Project</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-alt" id="about">
+                <div class="shell info-grid">
+                    <article class="info-card reveal">
+                        <p class="section-label">About</p>
+                        <h2>What this portfolio is for</h2>
                         <p>
-                            Dice Throne is a fast-paced card and dice battler built around hero identity. Each character has their own dice faces, offensive abilities, defensive rolls, and upgrade path, which makes matchups feel personal instead of generic.
+                            This portfolio is a central place to keep track of my school projects and the improvements I make to them over time. It gives me one homepage where I can organize work from different classes and show how those projects develop.
                         </p>
                         <p>
-                            This site is designed to help new players understand the flow of the game while giving fans a cleaner place to compare heroes, learn strategy basics, and jump into the bigger universe.
+                            Instead of leaving projects isolated in separate folders or assignments, I can use this site to collect them in one place and document the work I have completed.
                         </p>
-                        <div class="button-row">
-                            <a class="button-secondary" href="https://shop.dicethrone.com/collections/all?srsltid=AfmBOoprgyZY6WVi_MlrwcbVKvobJvwqivyo2EnkZNSXMZljKv1bUEO4" target="_blank" rel="noreferrer">Visit the Official Store</a>
-                        </div>
                     </article>
 
-                    <figure class="media-card">
-                        <h3>Intro Video</h3>
-                        <iframe src="https://www.youtube.com/embed/js_cZrv6cZY?si=aafniHmlLL_Nq9fO" title="Dice Throne intro video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <figcaption>An official-style first look if you want the fast summary before reading deeper.</figcaption>
-                    </figure>
-                </section>
-
-                <section class="section-grid">
-                    <article class="panel">
-                        <span class="eyebrow">Gameplay</span>
-                        <h2>Learn the flow of a turn</h2>
+                    <article class="info-card reveal">
+                        <p class="section-label">Project Types</p>
+                        <h2>What you can expect to find here</h2>
                         <p>
-                            Dice Throne turns are easy to follow once you understand the rhythm: upkeep, income, main phase, offensive rolls, defense, and cleanup. The trick is learning when to push for damage and when to spend combat points for setup.
+                            This portfolio is not limited to websites. It is also where I plan to include Java and Python work alongside web projects, so visitors can see a wider range of assignments and programming experience.
                         </p>
-                        <div class="button-row">
-                            <a class="button" href="gameplay.html">View Gameplay Guide</a>
-                        </div>
+                        <ul class="detail-list">
+                            <li>Web design and front-end course projects.</li>
+                            <li>Java programming assignments and larger class projects.</li>
+                            <li>Python work focused on problem solving, logic, and program structure.</li>
+                            <li>Updated versions of older projects that have been improved over time.</li>
+                        </ul>
                     </article>
-
-                    <article class="quote-card">
-                        <h3>About the game</h3>
-                        <blockquote>
-                            Often described as Yahtzee meets a card battler, Dice Throne blends big moments, hero identity, and dice manipulation into a format that stays approachable.
-                        </blockquote>
-                        <cite>
-                            Inspired by the official
-                            <a class="quote-link" href="https://shop.dicethrone.com/pages/about" target="_blank" rel="noreferrer">Dice Throne About page</a>
-                        </cite>
-                    </article>
-                </section>
-
-                <section class="section-grid">
-                    <article class="panel">
-                        <span class="eyebrow">Heroes</span>
-                        <h2>Every hero changes the puzzle</h2>
-                        <p>
-                            Some heroes are straightforward damage dealers. Others are timing-heavy control characters, sustain specialists, or tricky combo engines. Learning which style fits you is one of the best parts of the game.
-                        </p>
-                        <p>
-                            The roster page collects the heroes into one cleaner reference so you can browse styles, strengths, and release sets without digging through product pages.
-                        </p>
-                        <div class="button-row">
-                            <a class="button" href="heroes.html">Browse the Roster</a>
-                        </div>
-                    </article>
-
-                    <figure class="media-card">
-                        <h3>Hero Spotlight</h3>
-                        <iframe src="https://www.youtube.com/embed/05hhNzoaqn4?si=RApddD3cEWfcDgZx" title="Dice Throne Outcasts trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <figcaption>Trailers like this are great for getting a feel for the tone and style of new releases.</figcaption>
-                    </figure>
-                </section>
-
-                <section class="section-grid">
-                    <article class="panel">
-                        <span class="eyebrow">Strategy</span>
-                        <h2>Small decisions add up fast</h2>
-                        <p>
-                            Good Dice Throne play is about more than landing a flashy ability. You are managing rerolls, hand resources, combat points, and the tempo of the matchup every turn.
-                        </p>
-                        <div class="button-row">
-                            <a class="button" href="strategies.html">Read Strategy Notes</a>
-                        </div>
-                    </article>
-
-                    <article class="quote-card">
-                        <h3>Classic fan advice</h3>
-                        <blockquote>
-                            Practice a flexible hero first so you can learn when to switch between aggressive and defensive play instead of only chasing the biggest attack.
-                        </blockquote>
-                        <cite>
-                            Based on community advice from
-                            <a class="quote-link" href="https://www.reddit.com/r/DiceThrone/comments/1hp9kv0/comment/m4gbqv0/" target="_blank" rel="noreferrer">Ran3773 on Reddit</a>
-                        </cite>
-                    </article>
-                </section>
-
-                <section class="section-grid">
-                    <article class="expansion-card">
-                        <span class="eyebrow">Co-op Expansion</span>
-                        <h3>Dice Throne Adventures</h3>
-                        <p>
-                            Adventures turns the duel system into a cooperative dungeon crawl with portal maps, minions, bosses, loot, and longer-form progression. It is the best bridge from competitive play into campaign-style sessions.
-                        </p>
-                        <div class="button-row">
-                            <a class="button-secondary" href="expansions.html">See Expansions</a>
-                        </div>
-                    </article>
-
-                    <article class="expansion-card">
-                        <span class="eyebrow">Marvel Co-op</span>
-                        <h3>Missions</h3>
-                        <p>
-                            Marvel Dice Throne Missions adds scenario-driven villain encounters for solo and cooperative play, letting heroes like <span class="spiderman hero">Spider-Man</span>, <span class="thor hero">Thor</span>, <span class="loki hero">Loki</span>, and <span class="scarlet hero">Scarlet Witch</span> team up against enemies like <span class="ultron hero">Ultron</span> and <span class="goblin hero">Green Goblin</span>.
-                        </p>
-                        <div class="button-row">
-                            <a class="button-secondary" href="expansions.html">Compare Modes</a>
-                        </div>
-                    </article>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
-            <div class="footer-inner">
+            <div class="shell footer-inner">
                 <nav class="footer-nav" aria-label="Footer navigation">
-                    <a href="index.html">Home</a>
-                    <a href="gameplay.html">Gameplay</a>
-                    <a href="heroes.html">Heroes</a>
-                    <a href="strategies.html">Strategies</a>
-                    <a href="expansions.html">Expansions</a>
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="projects/dice-throne/index.html">Dice Throne</a>
                 </nav>
-
                 <div class="copyright">&copy; 2026 Blake Gould</div>
             </div>
         </footer>
+
+        <script src="portfolio.js"></script>
     </body>
 </html>
