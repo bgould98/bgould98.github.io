@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset ="utf-8">
+
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        .shadows-into-light-regular {
+            font-family: "Shadows Into Light", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .amatic-sc-regular {
+            font-family: "Amatic SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav{
+            padding: 2%;
+            font-size: 32px;
+        }
+
+        body{
+            margin: 0%;
+            background: #f4f0e6;
+        }
+
+        header{
+            margin-top: 0%;
+            padding-bottom: 1%;
+            font-size: x-large;
+            background-color:rgb(53, 53, 53);
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(53, 53, 53);;
+            color: whitesmoke;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        nav>a{
+            color:black;
+            margin-left: 1%;
+        }
+
+        nav>a:visited{
+            color:black;
+        }
+
+        nav>a:hover{
+            text-decoration: underline;
+            color:rgb(107, 107, 107);
+        }
+
+        .active_page {
+            text-decoration: underline;
+            color: black;
+        }
+
+        #projects-content{
+            max-width: 40%;
+            margin: 2% auto;
+        }
+
+        article>div>h2 {
+            font-family: "Amatic SC", cursive;
+            font-size: 48px;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #a09b80;
+            display: inline-block;
+        }
+
+        article>div>h3{
+            font-family: "Amatic SC", cursive;
+            font-size: 36px;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #a09b80;
+            display: inline-block;
+        }
+
+        article>div>p {
+            font-size: 22px;
+            margin: 0.5em 0;
+        }
+
+        article>div>figure {
+            margin: 0;
+            max-width: 800px;
+            display: inline-block;
+            margin-top: 6%;
+            margin-bottom: 6%;
+        }
+
+        article>div>figure:hover{
+            transform: scale(1.2);
+            transition: transform 0.5s ease;
+        }
+
+        article>div>figure>img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        figcaption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        p{
+            text-indent: 5%;
+            font-family: "Handlee", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        ul, ol{
+            font-family: "Handlee", cursive;
+            font-weight: 400;
+            font-style: italic;
+
+            font-size: 18px;
+        }
+
+        ol{
+            list-style-type: lower-roman;
+            font-weight: bold;
+        }
+
+        ul{
+            list-style-type: circle;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="page_layout">
+        <div class="amatic-sc-regular">
+            <nav>
+                <a href="../../index.html">Portfolio</a>
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="projects.html" class="active_page">Projects</a>
+                <a href="music.html">Music</a>
+                <a href="college.html">College</a>
+            </nav>
+        </div>
+
+        <header>
+            <h1 class="shadows-into-light-regular">My Programming Projects</h1>
+            <h2 class="shadows-into-light-regular">From Java apps to recreating "Dice Throne", here's what I've been building</h2>
+        </header>
+
+        <div id="projects-content">
+            <article>
+                <div>
+                    <h2>The Apocalypse</h2>
+
+                    <figure>
+                        <img src="pics/apoc.png" alt="A screenshot of my code for my Apocalypse assignment."/>
+
+                        <figcaption>
+                            A screenshot of my Apocalypse assignment from my Object-Oriented Programming class.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        One of my favorite things I've made so far during my computer science studies was an Apocalypse simulation. We built upon this entire project throughout the semester, which made it easy to understand the structure and layout of object-oriented programming. There were of course certain requirements to complete this project, but I didn't stop there. The simulation works like this:
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Rules</h3>
+
+                    <ul>
+                        <li>There are 25 people who have 10 days to survive a zombie apocalypse.</li>
+                        <li>Every night, a horde of 15-25 (at random) zombies will attack.</li>
+                        <li>The survivors will need to scavenge for food, ammo, medkits, and wood, as there isn't enough to survive the 10 days.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Strategies</h3>
+
+                    <p>
+                        There are a couple of strategies and tips you can use to help more people survive the 10 days.
+                    </p>
+
+                    <p>
+                        These include:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Gathering wood
+                            <ul>
+                                <li>Gathering wood is essential for building barricades. Barricades help slow down the zombie horde, allowing for more kills and less deaths.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Keeping watch on your stockpile every morning.
+                            <ul>
+                                <li>If your stockpile gets too low, you could run into trouble like not being able to shoot, eat, or build barricades. Keep watch!</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Healing/Reviving Allies With Medkits
+                            <ul>
+                                <li>
+                                    Medkits can be used to heal and revive dead allies. Make sure you have a healthy supply of these.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Keep at least 10 rounds of ammo per person.
+                            <ul>
+                                <li>
+                                    Without it, the odds of winning a figth against a zombie become dramatically low.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </div>
+
+        <footer class="shadows-into-light-regular">Blake Gould - copyright 2025</footer>
+    </div>
+</body>
+</html>

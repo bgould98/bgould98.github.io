@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset ="utf-8">
+
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        .handlee-regular {
+            font-family: "Handlee", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .shadows-into-light-regular {
+            font-family: "Shadows Into Light", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .amatic-sc-regular {
+            font-family: "Amatic SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav{
+            padding: 2%;
+            font-size: 32px;
+        }
+
+        body{
+            margin: 0%;
+            background: #f4f0e6;
+            font-family: "Handlee", cursive;
+        }
+
+        header{
+            margin-top: 0%;
+            padding-bottom: 1%;
+            font-size: x-large;
+            background-color:rgb(53, 53, 53);
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(53, 53, 53);;
+            color: whitesmoke;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        nav>a{
+            color:black;
+            margin-left: 1%;
+        }
+
+        nav>a:visited{
+            color:black;
+        }
+
+        nav>a:hover{
+            text-decoration: underline;
+            color:rgb(107, 107, 107);
+        }
+
+        .active_page {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .content{
+            display: flex;
+            max-width: 80%;
+            margin: 1% auto;
+        }
+
+        #home-content {
+            max-width: 40%;
+            margin: 2% auto;
+        }
+
+        article>div>h2 {
+            font-family: "Amatic SC", cursive;
+            font-size: 42px;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #a09b80;
+            display: inline-block;
+        }
+
+        article>div>p {
+            font-size: 24px;
+            margin: 0.5em 0;
+        }
+
+        article>div>a {
+            font-family: "Shadows Into Light", cursive;
+            font-size: 20px;
+            color: #333;
+            display: inline-block;
+            transition: font-size 0.3s ease, color 0.3s ease;
+        }
+
+        article>div>a:hover{
+            font-size: 24px;
+            color: rgb(56, 56, 56);
+            text-decoration: underline;
+        }
+
+        article>div>figure {
+            margin: 0;
+            max-width: 300px;
+        }
+
+        article>div>figure>img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        figcaption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .pics-of-me{
+            display: flex;
+            gap: 5%;
+            justify-content: center;
+            margin-bottom: 1%;
+            margin-top: 5%;
+        }
+
+        .pics-of-me>figure{
+            flex: 1;
+            text-align: center;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .pics-of-me>figure>img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .pics-of-me>figure:hover{
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="amatic-sc-regular">
+            <nav class="amatic-sc-regular">
+                <a href="../../index.html">Portfolio</a>
+                <a href="index.html" class="active_page">Home</a>
+                <a href="games.html">Games</a>
+                <a href="projects.html">Projects</a>
+                <a href="music.html">Music</a>
+                <a href="college.html">College</a>
+            </nav>
+        </div>
+
+        <header>
+            <h1 class="shadows-into-light-regular">Home</h1>
+            <h2 class="shadows-into-light-regular">Exploring my favorite games, my music & projects, and my college life</h2>
+        </header>
+
+        <div id="home-content">
+            <article>
+                <div>
+                    <h2>About Me</h2>
+
+                    <p>
+                        Hi! My name is Blake. This website is a space where I share some of the things I'm most passionate about. From the video games that shaped my free time, to the music I've created, the projects I've built as a computer science student, and my experiences in college. Each page gives you a glimpse into what I enjoy and what inspires me.
+                    </p>
+                </div>
+
+                <div class="pics-of-me">
+                    <figure>
+                        <img src="pics/me.jpg" alt ="A picture of me in the high desert mountains."/>
+                        <figcaption>A picture of me during a dirt biking trip in the high desert mountains in California.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="pics/me2.jpg" alt="A picture of me with 2 friends at a halloween bar crawl."/>
+                        <figcaption>
+                            A picture of me with 2 friends at a halloween bar crawl (middle).
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <h2>Games</h2>
+
+                    <p>
+                        I've always loved exploring new worlds, strategies, and challenges through games. On this page, I share some of my favorite games (video and board) and what makes them special to me.
+                    </p>
+
+                    <a href="games.html">Explore Games -></a>
+                </div>
+            </article>
+
+            <article>
+                <div class="text">
+                    <h2>Projects</h2>
+                    
+                    <p>
+                        From programming experiments to assignments, here you can see the projects I've worked on, along with the lessons I've learned along the way.
+                    </p>
+
+                    <a href="projects.html">See Projects -></a>
+                </div>
+            </article>
+
+            <article>
+                <div class="text">
+                    <h2>My Music</h2>
+
+                    <p>
+                        Check out my tracks and musical experiments from over the years, along with my journey learning to make music.
+                    </p>
+
+                    <a href="music.html">Listen to My Music -></a>
+                </div>
+            </article>
+
+            <article>
+                <div class="text">
+                    <h2>College Life</h2>
+                    
+                    <p>
+                        Here I share some of my experiences, courses, and tips as a computer science student navigating through college life.
+                    </p>
+
+                    <a href="college.html">Read More -></a>
+                </div>
+            </article>
+        </div>
+
+        <footer class="shadows-into-light-regular">Blake Gould - copyright 2025</footer>
+    </div>
+</body>
+</html>
