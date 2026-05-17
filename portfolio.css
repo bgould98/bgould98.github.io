@@ -380,6 +380,21 @@ p {
   object-fit: contain;
 }
 
+.soccer-visual {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(194, 130, 255, 0.42), transparent 34%),
+    radial-gradient(circle at 86% 22%, rgba(214, 232, 0, 0.2), transparent 24%),
+    linear-gradient(135deg, #140047, #4b1597 58%, #8b58ff);
+}
+
+.soccer-logo-preview {
+  width: min(100%, 220px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 22px 42px rgba(31, 8, 84, 0.32);
+}
+
 .project-content {
   padding: 30px;
 }

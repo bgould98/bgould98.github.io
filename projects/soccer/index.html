@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestial Thunder | Team Schedule</title>
+  <meta name="description" content="Celestial Thunder soccer schedule powered by a published ICS calendar file.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="soccer.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="../../index.html">
+        <img class="crest" src="pics/logo.jpg" alt="Celestial Thunder logo">
+        <span>
+          <span class="brand-title">Celestial Thunder</span>
+          <span class="brand-subtitle">CSC Co-Ed Soccer Schedule</span>
+        </span>
+      </a>
+      <div class="top-actions">
+        <a class="nav-link" href="../../index.html">Portfolio</a>
+        <a class="button button-secondary" href="https://cscsports.leaguelab.com/player/schedule" target="_blank" rel="noopener">CSC Schedule</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Team schedule</p>
+          <h1>Matchday made simple.</h1>
+          <p class="hero-summary">
+            A simple team calender for the Celestial Thunder. Periodically updated as necessary.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#schedule">View schedule</a>
+            <button class="button button-secondary" id="refresh-schedule" type="button">Refresh schedule</button>
+          </div>
+        </div>
+
+        <section class="match-panel" aria-live="polite">
+          <div class="match-panel-content">
+            <div class="next-tag">Next game</div>
+            <h2 class="next-title" id="next-title">Loading schedule</h2>
+            <div class="next-details" id="next-details">
+              <span>The page is looking for projects/soccer/schedule.ics.</span>
+            </div>
+          </div>
+          <div class="countdown" id="countdown">Ready for kickoff</div>
+        </section>
+      </div>
+    </section>
+
+    <section class="shell content-grid" id="schedule">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Season Schedule</h2>
+            <p class="panel-subtitle" id="schedule-subtitle">Reading games from schedule.ics in the soccer project folder.</p>
+          </div>
+        </div>
+
+        <div id="schedule-output">
+          <div class="empty">
+            <strong>Looking for schedule.ics</strong>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side-stack">
+        <section class="panel side-panel">
+          <h2>Schedule Snapshot</h2>
+          <div class="status-row">
+            <div class="stat">
+              <span class="stat-value" id="stat-total">0</span>
+              <span class="stat-label">Games</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="stat-upcoming">0</span>
+              <span class="stat-label">Upcoming</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="stat-past">0</span>
+              <span class="stat-label">Past</span>
+            </div>
+          </div>
+        </section>
+
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">Celestial Thunder schedule page for CSC Co-Ed Soccer.</div>
+    <div class="copyright">&copy; 2026 Blake Gould</div>
+  </footer>
+
+  <script src="soccer.js"></script>
+</body>
+</html>

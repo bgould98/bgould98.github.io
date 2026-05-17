@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:League Lab Inc//League Lab//EN
+BEGIN:VEVENT
+DTSTART:20260517T211000Z
+DTEND:20260517T221000Z
+UID:game_3773105@cscsports.leaguelab.com
+SUMMARY:Julia's Team at Celestial Thunder
+DESCRIPTION:Julia's Team at Celestial Thunder
+LOCATION:Holy Angels -Outdoor Stadium \, Field: HA-south\, 6600 Nicollet Ave S	 \, Richfield\,	 MN	55423	
+ORGANIZER;CN=CSC Sports:MAILTO:info@cscsports.com
+URL:https://cscsports.leaguelab.com/player/schedule
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260531T172500Z
+DTEND:20260531T182500Z
+UID:game_3773170@cscsports.leaguelab.com
+SUMMARY:Where In The World Is Adrienne at Celestial Thunder
+DESCRIPTION:Where In The World Is Adrienne at Celestial Thunder
+LOCATION:Holy Angels -Outdoor Stadium \, Field: HA-north\, 6600 Nicollet Ave S	 \, Richfield\,	 MN	55423	
+ORGANIZER;CN=CSC Sports:MAILTO:info@cscsports.com
+URL:https://cscsports.leaguelab.com/player/schedule
+END:VEVENT
+END:VCALENDAR
