@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-04-19",
+    "homeTeam": "The Average Joes",
+    "homeScore": 1,
+    "awayTeam": "Celestial Thunder",
+    "awayScore": 3,
+    "field": "UMN-north",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-04-19_14-00-00_7003_1"
+  },
+  {
+    "date": "2026-04-26",
+    "homeTeam": "Celestial Thunder",
+    "homeScore": 2,
+    "awayTeam": "The Real Borrachos",
+    "awayScore": 3,
+    "field": "UMN-north",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-04-26_17-45-00_7003_1"
+  },
+  {
+    "date": "2026-05-03",
+    "homeTeam": "Celestial Thunder",
+    "homeScore": 3,
+    "awayTeam": "Beautiful Disasters",
+    "awayScore": 5,
+    "field": "PP-North",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-05-03_12-40-00_6988_1"
+  },
+  {
+    "date": "2026-05-10",
+    "homeTeam": "Celestial Thunder",
+    "homeScore": 3,
+    "awayTeam": "SUNDAY FUNDAY!",
+    "awayScore": 2,
+    "field": "CH-Far",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-05-10_20-55-00_6912_2"
+  },
+  {
+    "date": "2026-05-17",
+    "homeTeam": "Celestial Thunder",
+    "homeScore": 5,
+    "awayTeam": "Julia's Team",
+    "awayScore": 3,
+    "field": "HA-south",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-05-17_16-10-00_7241_1"
+  }
+]

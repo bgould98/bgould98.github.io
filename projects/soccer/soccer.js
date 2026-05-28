@@ -1,5 +1,6 @@
     const TEAM_NAME = "Celestial Thunder";
     const DEFAULT_ICS = "schedule.ics";
+    const DEFAULT_RECAPS = "recaps.json";
 
     const output = document.querySelector("#schedule-output");
     const scheduleSubtitle = document.querySelector("#schedule-subtitle");
@@ -10,6 +11,8 @@
     const statTotal = document.querySelector("#stat-total");
     const statUpcoming = document.querySelector("#stat-upcoming");
     const statPast = document.querySelector("#stat-past");
+    const recapCount = document.querySelector("#recap-count");
+    const recapList = document.querySelector("#recap-list");
 
     refreshButton.addEventListener("click", () => {
       loadDefaultSchedule();
@@ -25,8 +28,9 @@
         }
         const text = await response.text();
         const events = parseICS(text);
+        const recaps = await loadRecaps();
         if (events.length) {
-          renderSchedule(events, DEFAULT_ICS);
+          renderSchedule(events, DEFAULT_ICS, recaps);
           scheduleSubtitle.textContent = "Loaded " + DEFAULT_ICS;
         } else {
           showMissingSchedule("No games were found in " + DEFAULT_ICS + ".");
@@ -43,7 +47,19 @@
       statTotal.textContent = "0";
       statUpcoming.textContent = "0";
       statPast.textContent = "0";
+      renderRecapList([]);
       resetHero();
+    }
+
+    async function loadRecaps() {
+      try {
+        const response = await fetch(DEFAULT_RECAPS, { cache: "no-store" });
+        if (!response.ok) return [];
+        const recaps = await response.json();
+        return Array.isArray(recaps) ? recaps.map(normalizeRecap).filter(Boolean) : [];
+      } catch (error) {
+        return [];
+      }
     }
 
     function parseICS(text) {
@@ -102,10 +118,11 @@
       return new Date(+year, +month - 1, +day, +hour, +minute, +second);
     }
 
-    function renderSchedule(events, sourceName) {
+    function renderSchedule(events, sourceName, recaps) {
       const now = new Date();
-      const upcoming = events.filter((event) => event.date >= now);
-      const past = events.filter((event) => event.date < now);
+      const games = attachRecaps(events, recaps);
+      const upcoming = games.filter((event) => event.date >= now);
+      const past = games.filter((event) => event.date < now);
 
       statTotal.textContent = events.length;
       statUpcoming.textContent = upcoming.length;
@@ -115,6 +132,7 @@
         output.innerHTML = emptyState("No games found", "Make sure schedule.ics is a valid calendar file from CSC.");
         scheduleSubtitle.textContent = "No games were found in schedule.ics.";
         resetHero();
+        renderRecapList([]);
         return;
       }
 
@@ -125,18 +143,19 @@
       } else {
         nextTitle.textContent = "Season complete";
         nextDetails.innerHTML = "<span>All games in this calendar are in the past.</span>";
-        countdown.textContent = "See past games below";
+        countdown.textContent = "See game recaps";
       }
 
       let html = "";
       if (upcoming.length) {
         html += buildSection("Upcoming Games", upcoming);
       }
-      if (past.length) {
-        html += buildSection("Past Games", past.slice().reverse());
+      if (!upcoming.length) {
+        html += emptyState("No upcoming games", "Completed games are listed in the Game Recaps panel.");
       }
 
       output.innerHTML = '<div class="schedule-section">' + html + "</div>";
+      renderRecapList(recaps);
     }
 
     function renderNextGame(event) {
@@ -165,16 +184,94 @@
       const opponent = getOpponent(event.summary);
       const safeTitle = escapeHTML(opponent ? "vs " + opponent : event.summary);
       const safeLocation = escapeHTML(event.location);
+      const recap = event.recap ? recapHTML(event.recap) : "";
       const location = event.location
         ? '<a class="game-detail" href="' + mapsUrl(event.location) + '" target="_blank" rel="noopener">' + safeLocation + "</a>"
         : "";
+      const result = event.recap ? '<div class="game-result"><span>' + resultLabel(event.recap) + '</span><strong>' + scoreLine(event.recap) + "</strong></div>" : "";
 
       return '<article class="game-card">' +
         '<div class="date-block"><span><span class="date-day">' + event.date.getDate() + '</span><span class="date-month">' + monthName(event.date) + '</span></span></div>' +
         '<div><div class="game-title">' + safeTitle + '</div>' +
-        '<div class="game-meta"><span class="game-detail">' + formatDate(event.date) + '</span><span class="game-detail">' + formatTime(event.date) + '</span>' + location + '</div></div>' +
+        '<div class="game-meta"><span class="game-detail">' + formatDate(event.date) + '</span><span class="game-detail">' + formatTime(event.date) + '</span>' + location + recap + '</div></div>' +
+        result +
         badgeHTML(event) +
         '</article>';
+    }
+
+    function renderRecapList(recaps) {
+      const sortedRecaps = recaps.slice().sort((a, b) => b.date.localeCompare(a.date));
+      recapCount.textContent = sortedRecaps.length;
+      if (!sortedRecaps.length) {
+        recapList.innerHTML = '<p class="recap-empty">No game recaps have been added yet.</p>';
+        return;
+      }
+
+      recapList.innerHTML = sortedRecaps.map((recap) => {
+        const opponent = escapeHTML(recapOpponent(recap));
+        return '<a class="recap-item" href="' + escapeHTML(recap.url) + '" target="_blank" rel="noopener">' +
+          '<span><strong>' + resultLabel(recap) + " " + scoreLine(recap) + '</strong><span>vs ' + opponent + '</span></span>' +
+          '<span>' + formatDate(parseLocalDate(recap.date)) + '</span>' +
+          '</a>';
+      }).join("");
+    }
+
+    function attachRecaps(events, recaps) {
+      return events.map((event) => ({
+        ...event,
+        recap: findRecapForEvent(event, recaps)
+      }));
+    }
+
+    function findRecapForEvent(event, recaps) {
+      const eventDate = toDateKey(event.date);
+      const opponent = normalizeName(getOpponent(event.summary));
+      const matches = recaps.filter((recap) => recap.date === eventDate);
+
+      return matches.find((recap) => {
+        const teams = [recap.homeTeam, recap.awayTeam].map(normalizeName);
+        return teams.includes(normalizeName(TEAM_NAME)) && (!opponent || teams.includes(opponent));
+      }) || matches[0] || null;
+    }
+
+    function normalizeRecap(recap) {
+      if (!recap || !recap.date || !recap.homeTeam || !recap.awayTeam || !recap.url) return null;
+      return {
+        date: recap.date,
+        homeTeam: String(recap.homeTeam),
+        homeScore: Number(recap.homeScore),
+        awayTeam: String(recap.awayTeam),
+        awayScore: Number(recap.awayScore),
+        field: recap.field ? String(recap.field) : "",
+        url: String(recap.url)
+      };
+    }
+
+    function recapHTML(recap) {
+      const field = recap.field ? " - " + escapeHTML(recap.field) : "";
+      return '<a class="game-detail recap-link" href="' + escapeHTML(recap.url) + '" target="_blank" rel="noopener">Recap' + field + '</a>';
+    }
+
+    function resultLabel(recap) {
+      const teamScore = teamIsHome(recap) ? recap.homeScore : recap.awayScore;
+      const opponentScore = teamIsHome(recap) ? recap.awayScore : recap.homeScore;
+      if (teamScore > opponentScore) return "W";
+      if (teamScore < opponentScore) return "L";
+      return "T";
+    }
+
+    function scoreLine(recap) {
+      return teamIsHome(recap)
+        ? recap.homeScore + "-" + recap.awayScore
+        : recap.awayScore + "-" + recap.homeScore;
+    }
+
+    function teamIsHome(recap) {
+      return normalizeName(recap.homeTeam) === normalizeName(TEAM_NAME);
+    }
+
+    function recapOpponent(recap) {
+      return teamIsHome(recap) ? recap.awayTeam : recap.homeTeam;
     }
 
     function emptyState(title, message) {
@@ -230,6 +327,18 @@
       return date.toLocaleString("en-US", { month: "short" });
     }
 
+    function toDateKey(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return year + "-" + month + "-" + day;
+    }
+
+    function parseLocalDate(value) {
+      const [year, month, day] = String(value).split("-").map(Number);
+      return new Date(year, month - 1, day);
+    }
+
     function countdownText(date) {
       const diff = date - new Date();
       if (diff <= 0) return "Starting soon";
@@ -262,6 +371,10 @@
 
     function escapeRegExp(value) {
       return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function normalizeName(value) {
+      return String(value).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
     }
 
     loadDefaultSchedule();
