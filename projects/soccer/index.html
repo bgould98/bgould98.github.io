@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Celestial Thunder | Team Schedule</title>
   <meta name="description" content="Celestial Thunder soccer schedule powered by a published ICS calendar file.">
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("soccer-theme") || "light";
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +30,12 @@
       <div class="top-actions">
         <a class="nav-link" href="../../index.html">Portfolio</a>
         <a class="button button-secondary" href="https://cscsports.leaguelab.com/player/schedule" target="_blank" rel="noopener">CSC Schedule</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-icon theme-toggle-sun">☀</span>
+            <span class="theme-toggle-icon theme-toggle-moon">☾</span>
+          </span>
+        </button>
       </div>
     </div>
   </header>

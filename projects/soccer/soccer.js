@@ -13,10 +13,41 @@
     const statPast = document.querySelector("#stat-past");
     const recapCount = document.querySelector("#recap-count");
     const recapList = document.querySelector("#recap-list");
+    const themeToggle = document.querySelector("#theme-toggle");
+
+    initializeThemeToggle();
 
     refreshButton.addEventListener("click", () => {
       loadDefaultSchedule();
     });
+
+    function initializeThemeToggle() {
+      let savedTheme = "light";
+      try {
+        savedTheme = localStorage.getItem("soccer-theme") || "light";
+      } catch (error) {
+        savedTheme = "light";
+      }
+      document.documentElement.dataset.theme = savedTheme;
+      syncThemeToggle(savedTheme);
+
+      themeToggle.addEventListener("click", () => {
+        const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        syncThemeToggle(theme);
+        try {
+          localStorage.setItem("soccer-theme", theme);
+        } catch (error) {
+          return;
+        }
+      });
+    }
+
+    function syncThemeToggle(theme) {
+      const isDark = theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    }
 
     async function loadDefaultSchedule() {
       scheduleSubtitle.textContent = "Checking for " + DEFAULT_ICS + "...";
