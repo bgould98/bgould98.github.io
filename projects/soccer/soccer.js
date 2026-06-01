@@ -174,7 +174,7 @@
       } else {
         nextTitle.textContent = "Season complete";
         nextDetails.innerHTML = "<span>All games in this calendar are in the past.</span>";
-        countdown.textContent = "See game recaps";
+        countdown.innerHTML = '<a href="#game-recaps">See game recaps</a>';
       }
 
       let html = "";
