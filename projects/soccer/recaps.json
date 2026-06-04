@@ -43,5 +43,14 @@
     "awayScore": 3,
     "field": "HA-south",
     "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-05-17_16-10-00_7241_1"
+  },
+  {
+    "date": "2026-05-31",
+    "homeTeam": "Celestial Thunder",
+    "homeScore": 4,
+    "awayTeam": "Where In The World Is Adrienne",
+    "awayScore": 2,
+    "field": "HA-north",
+    "url": "https://cscsports.leaguelab.com/gamerecap/98480/d_2026-05-31_12-25-00_7241_2"
   }
 ]
