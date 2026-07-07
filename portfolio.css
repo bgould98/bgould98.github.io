@@ -372,7 +372,7 @@ p {
   padding: 30px;
   background:
     radial-gradient(circle at top, rgba(15, 76, 129, 0.12), transparent 52%),
-    linear-gradient(180deg, rgba(216, 231, 245, 0.6), rgba(255, 255, 255, 0.3));
+    linear-gradient(180deg, rgba(243, 93, 34, 0.6), rgb(250, 192, 174));
 }
 
 .project-visual img {
@@ -393,6 +393,23 @@ p {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 22px 42px rgba(31, 8, 84, 0.32);
+}
+
+.dta-visual {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(15, 76, 129, 0.12), transparent 52%),
+    linear-gradient(180deg, rgba(243, 93, 34, 0.6), rgb(119, 255, 171));
+}
+
+.dta-visual img {
+  width: min(100%, 1500px);
+  height: auto;
+  object-fit: contain;
 }
 
 .project-content {
