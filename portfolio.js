@@ -28,16 +28,6 @@ if (themeToggle) {
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (!prefersReducedMotion) {
-  const updateParallax = () => {
-    const offset = Math.min(window.scrollY * -0.18, 0);
-    document.documentElement.style.setProperty("--parallax-offset", `${offset}px`);
-  };
-
-  updateParallax();
-  window.addEventListener("scroll", updateParallax, { passive: true });
-}
-
 const revealItems = document.querySelectorAll(".reveal");
 
 revealItems.forEach((item, index) => {
